@@ -12,3 +12,4 @@ C:\Users\Aluno\Documents\C#\ModuloAutenticacao\ModuloAutenticacao.Desktop\bin\De
 C:\Users\Aluno\Documents\C#\ModuloAutenticacao\ModuloAutenticacao.Desktop\obj\Debug\ModuloAutenticacao.Desktop.csproj.CopyComplete
 C:\Users\Aluno\Documents\C#\ModuloAutenticacao\ModuloAutenticacao.Desktop\obj\Debug\ModuloAutenticacao.Desktop.exe
 C:\Users\Aluno\Documents\C#\ModuloAutenticacao\ModuloAutenticacao.Desktop\obj\Debug\ModuloAutenticacao.Desktop.pdb
+C:\Users\Aluno\Documents\C#\ModuloAutenticacao\ModuloAutenticacao.Desktop\obj\Debug\ModuloAutenticacao.Desktop.TelaDeCadastro.resources

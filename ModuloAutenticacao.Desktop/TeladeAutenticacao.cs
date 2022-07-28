@@ -45,12 +45,15 @@ namespace ModuloAutenticacao.Desktop
             }
             else if (user.Senha.Equals(""))
             {
-                MessageBox.Show("Usuario ou senha invalido");
+                MessageBox.Show("Senha invalida");
                 txtSenha.Focus();
             }
             else
             {
                 MessageBox.Show("Sucesso!");
+                TelaDeCadastro tcu = new TelaDeCadastro();
+                tcu.Show();
+
             }
         }
     }
