@@ -39,12 +39,15 @@ namespace ModuloAutenticacao.Desktop
 
         private void label3_Click(object sender, EventArgs e)
         {
-
+           
         }
+         
 
         private void textBox1_TextChanged(object sender, EventArgs e)
-        {
+        
 
+        {
+          
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
@@ -62,6 +65,21 @@ namespace ModuloAutenticacao.Desktop
 
             txtLogin.Text = "o Leave foi acionado";
             txtLogin.BackColor = Color.Red;
+            txtLogin.Text = txtID.Text;
+            txtLogin.BackColor = Color.White;
+            //Clever
+            string[] nome = txtID.Text.Split(' ');
+            //txtLogin.Text = nome[0];
+            //Yedo
+            string substring = "";
+            string[] subs = textBox2.Text.Split();
+            foreach (string sub in subs)
+            {
+                //  MessageBox.Show($"Substring: {sub}");
+                substring = sub;
+            }
+            //===================
+            txtLogin.Text = $"{nome[0].ToLower()}.{substring.ToLower()}";
 
         }
 
