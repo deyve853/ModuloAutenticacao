@@ -46,7 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interface1.cs" />
+    <Compile Include="TelaNivel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaNivel.Designer.cs">
+      <DependentUpon>TelaNivel.cs</DependentUpon>
+    </Compile>
     <Compile Include="TeladeAutenticacao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +66,9 @@
     <Compile Include="TelaDeCadastro.Designer.cs">
       <DependentUpon>TelaDeCadastro.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TelaNivel.resx">
+      <DependentUpon>TelaNivel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TeladeAutenticacao.resx">
       <DependentUpon>TeladeAutenticacao.cs</DependentUpon>
     </EmbeddedResource>

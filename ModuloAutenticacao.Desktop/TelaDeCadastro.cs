@@ -92,5 +92,16 @@ namespace ModuloAutenticacao.Desktop
         {
             
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TelaNivel tcu = new TelaNivel();
+            tcu.Show();
+        }
     }
 }

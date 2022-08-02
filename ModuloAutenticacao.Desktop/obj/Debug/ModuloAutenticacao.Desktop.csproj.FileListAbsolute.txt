@@ -13,3 +13,4 @@ C:\Users\Aluno\Documents\C#\ModuloAutenticacao\ModuloAutenticacao.Desktop\obj\De
 C:\Users\Aluno\Documents\C#\ModuloAutenticacao\ModuloAutenticacao.Desktop\obj\Debug\ModuloAutenticacao.Desktop.exe
 C:\Users\Aluno\Documents\C#\ModuloAutenticacao\ModuloAutenticacao.Desktop\obj\Debug\ModuloAutenticacao.Desktop.pdb
 C:\Users\Aluno\Documents\C#\ModuloAutenticacao\ModuloAutenticacao.Desktop\obj\Debug\ModuloAutenticacao.Desktop.TelaDeCadastro.resources
+C:\Users\Aluno\Documents\C#\ModuloAutenticacao\ModuloAutenticacao.Desktop\obj\Debug\ModuloAutenticacao.Desktop.TelaNivel.resources
