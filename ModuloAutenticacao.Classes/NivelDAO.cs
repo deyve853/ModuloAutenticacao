@@ -1,6 +1,7 @@
 ﻿using ModuloAutenticacao.Classes;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -29,18 +30,45 @@ namespace ModuloAuteticacao.Classes
             return "Dados inseridos com sucesso!";
 
         }
-        public void Atualizar()
+        public string Atualizar()
+        {
+            return "Vou atualizar";
+        }
+        public DataTable Pesquisar()
+        {
+            Conexao.MinhaInstancia.Open();
+            //Definindo o comando
+            SqlCommand comando = Conexao.MinhaInstancia.CreateCommand();
+            //Definindo o tipo de comando
+            comando.CommandType = System.Data.CommandType.Text;
+            //Definindo DML
+            comando.CommandText = "select * from Nivel";
+
+            //DataTable (banco de dados na memória)
+            DataTable dataTable = new DataTable();
+            SqlDataReader reader = comando.ExecuteReader();
+            dataTable.Load(reader);
+            Conexao.MinhaInstancia.Close();
+            return dataTable;
+        }
+
+        public string Pesquisar(string v)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string Deletar()
         {
 
+            return "Vou deletar o registro";
         }
-        public void Pesquisar()
+        //sobrecarga de metódo-mesmo nome 
+        //overLoad
+        public string PesquisarPorNome(string nome) 
         {
-
+        return "Vou pesquisar por nome";
         }
-        public void Deletar()
-        {
 
-        }
 
     }
 }
