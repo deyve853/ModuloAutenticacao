@@ -103,6 +103,7 @@
             this.bntAtualizar.TabIndex = 6;
             this.bntAtualizar.Text = "Atualizar";
             this.bntAtualizar.UseVisualStyleBackColor = true;
+            this.bntAtualizar.Click += new System.EventHandler(this.bntAtualizar_Click);
             // 
             // bntDeletar
             // 

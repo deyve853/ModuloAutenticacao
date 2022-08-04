@@ -30,19 +30,47 @@ namespace ModuloAuteticacao.Classes
             return "Dados inseridos com sucesso!";
 
         }
-        public string Atualizar()
+        public string Atualizar(string nome, string codigo)
         {
-            return "Vou atualizar";
+
+            Conexao.MinhaInstancia.Open();
+            SqlCommand comando = Conexao.MinhaInstancia.CreateCommand();
+            comando.CommandType = System.Data.CommandType.Text;
+            comando.CommandText = "UPADATE NIVEL SET NOME=@Nome WHERE ID=Codigo)";
+            comando.Parameters.Add(new SqlParameter("@Nome", nome));
+            comando.Parameters.Add(new SqlParameter("@Codigo", codigo));
+            comando.ExecuteNonQuery();
+
+            Conexao.MinhaInstancia.Close();
+
+            return "Atualizar!";
         }
         public DataTable Pesquisar()
         {
-            Conexao.MinhaInstancia.Open();
+             Conexao.MinhaInstancia.Open();
             //Definindo o comando
             SqlCommand comando = Conexao.MinhaInstancia.CreateCommand();
             //Definindo o tipo de comando
             comando.CommandType = System.Data.CommandType.Text;
             //Definindo DML
-            comando.CommandText = "select * from Nivel";
+            comando.CommandText = "SELECT * FROM Nivel";
+
+            //DataTable (banco de dados na memória
+            DataTable dataTable = new DataTable();
+            SqlDataReader reader = comando.ExecuteReader();
+            dataTable.Load(reader);
+            Conexao.MinhaInstancia.Close();
+
+            return dataTable;
+        }
+
+
+        public DataTable Deletar(string nome)
+        {
+            Conexao.MinhaInstancia.Open();
+            SqlCommand comando = Conexao.MinhaInstancia.CreateCommand();
+            comando.CommandType = System.Data.CommandType.Text;
+            comando.CommandText = ("DELETE FROM Nivel where Nome=@Nome;");
 
             //DataTable (banco de dados na memória)
             DataTable dataTable = new DataTable();
@@ -51,22 +79,22 @@ namespace ModuloAuteticacao.Classes
             Conexao.MinhaInstancia.Close();
             return dataTable;
         }
-
-        public string Pesquisar(string v)
-        {
-            throw new NotImplementedException();
-        }
-
-        public string Deletar()
-        {
-
-            return "Vou deletar o registro";
-        }
         //sobrecarga de metódo-mesmo nome 
         //overLoad
-        public string PesquisarPorNome(string nome) 
+        public DataTable PesquisarPorNome(string nome)
         {
-        return "Vou pesquisar por nome";
+            Conexao.MinhaInstancia.Open();
+            SqlCommand comando = Conexao.MinhaInstancia.CreateCommand();
+            comando.CommandType = System.Data.CommandType.Text;
+            comando.CommandText = ("SELECT * from Nivel where Nome=@Nome;");
+            comando.Parameters.AddWithValue("@Nome", nome);
+            DataTable dataTable = new DataTable();
+            SqlDataReader reader = comando.ExecuteReader();
+            dataTable.Load(reader);
+            Conexao.MinhaInstancia.Close();
+
+            return dataTable;
+
         }
 
 

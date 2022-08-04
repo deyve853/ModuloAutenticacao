@@ -39,17 +39,23 @@ namespace ModuloAutenticacao.Desktop
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            NivelDAO nivelDAO = new NivelDAO();
-            MessageBox.Show(nivelDAO.Pesquisar("Jose"));
+            NivelDAO nivelPesquisa = new NivelDAO();
+            dgvNivel.DataSource = nivelPesquisa.PesquisarPorNome(txtNome.Text);
+            if (txtNome.Text.Equals(""))
+            {
+                CarregarResponsabilidades();
+                txtNome.Clear();
+            }
         }
-
         private void bntDeletar_Click(object sender, EventArgs e)
         {
 
+
         }
-        public string Pesquisar(string nome)
+
+        private void bntAtualizar_Click(object sender, EventArgs e)
         {
-            return $"Olá {nome}";
+
         }
     }
 }
